@@ -1,0 +1,15 @@
+const express=require('express')
+const body_parser=require('body-parser')
+const cors=require('cors')
+const {addcontactus}=require('./database.js')
+const app=express()
+app.use(cors())
+app.use(body_parser.urlencoded({extended:true}))
+app.use(body_parser.json())
+app.post('/contact',async(req,res)=>{
+    const data=req.body
+    const response=await addcontactus(data)
+    console.log("contactus added")
+    res.send(response)
+ })
+ app.listen(4001)
