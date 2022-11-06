@@ -24,7 +24,10 @@ const Navbar = () => {
                                     <NavLink className="nav-link active" aria-current="page" to="/contactus">Contact</NavLink>
                                 </li>
                                 <li className="nav-item">
-                                    <NavLink className="nav-link active" aria-current="page" to="/about">About</NavLink>
+                                    <NavLink className="nav-link active" aria-current="page" to="/crypto">Crypto Check</NavLink>
+                                </li>
+                                <li className="nav-item">
+                                    <NavLink className="nav-link active" aria-current="page" to="/transaction">Transaction</NavLink>
                                 </li>
                             </ul>
                             <div className='buttons'>
