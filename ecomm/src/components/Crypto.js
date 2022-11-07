@@ -4,6 +4,8 @@ import "../style/Cryptochart.css";
 import Chart from './Coin';
 import Scrollbars from 'react-custom-scrollbars-2';
 import Typewriter from 'typewriter-effect';
+import Navigationbar from './Navigationbar';
+import Footermain from './Footermain';
 
 function Crypto() {
   const [coins, setCoins] = useState([]);
@@ -31,6 +33,7 @@ function Crypto() {
 
   return (
     <>
+      <Navigationbar />
       <h1 className='coin-head'>
         <Typewriter
           onInit={(typewriter) => {
@@ -81,6 +84,7 @@ function Crypto() {
           </form>
         </div>
       </div>
+      <Footermain />
     </>
   );
 }

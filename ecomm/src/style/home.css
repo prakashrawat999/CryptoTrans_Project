@@ -1,0 +1,108 @@
+.homeBg{
+  /*background-image: linear-gradient(-225deg,
+  #141414 0%,
+  #3e1b66 48%,
+  #1935d6 100%);*/
+  background: rgb(10,10,10);
+background: linear-gradient(90deg, rgba(10,10,10,1) 0%, rgba(8,13,180,1) 36%, rgba(111,3,3,1) 100%);
+/*background-size: cover;*/
+}
+.homeImg{
+  height: 80vh;
+  width: 109vh;
+}
+.homeTxt{
+  color: rgb(18, 2, 24);
+}
+.footerBg{
+  background-color:  rgb(18, 2, 24);
+}
+.formBg{
+  background-color:rgb(15, 7, 85) ;
+}
+.txtglow{
+  text-shadow: rgba(255,255,255,0.9) 0px 0px 4px;
+}
+.navBg{
+  background-color:rgb(18, 2, 24) ;
+  /*background: rgba( 255, 255, 255, 0.15 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 0px );
+  -webkit-backdrop-filter: blur( 0px );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );*/
+}
+/*UIVERSE BUTTON*/
+.homeBtn {
+  padding: 0.9em 1.6em;
+  border: none;
+  outline: none;
+  color: #FFF;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 12px;
+ }
+ 
+ .homeBtn::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(18, 2, 24);
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+ }
+ /* glow */
+ .homeBtn::before {
+  content: "";
+  background: linear-gradient(
+     45deg,
+     #FF0000, #002BFF, #FF00C8, #002BFF,
+       #FF0000, #002BFF, #FF00C8, #002BFF
+ );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 600%;
+  z-index: -1;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  filter: blur(8px);
+  animation: glowing 20s linear infinite;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
+  opacity: 0;
+ }
+ 
+ @keyframes glowing {
+  0% {
+   background-position: 0 0;
+  }
+ 
+  50% {
+   background-position: 400% 0;
+  }
+ 
+  100% {
+   background-position: 0 0;
+  }
+ }
+ 
+ /* hover */
+ .homeBtn:hover::before {
+  opacity: 1;
+ }
+ 
+ .homeBtn:active:after {
+  background: transparent;
+ }
+ 
+ .homeBtn:active {
+  color: #000;
+  font-weight: bold;
+ }

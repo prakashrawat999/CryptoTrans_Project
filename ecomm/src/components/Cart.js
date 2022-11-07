@@ -1,10 +1,11 @@
 import React from 'react'
-import Footer from './Footer'
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import { delItem } from '../redux/actions';
 import { NavLink } from 'react-router-dom';
 import EmptyCart from './EmptyCart';
+import Navbar from './Navbar';
+import Footer from './Footer';
 
 const Cart = () => {
 
@@ -46,6 +47,7 @@ const Cart = () => {
 
   return (
     <>
+      <Navbar />
       {state.length === 0 && EmptyCart()}
       {state.length !== 0 && state.map(cartItems)}
       {state.length !== 0 && button()}

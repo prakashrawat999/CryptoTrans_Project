@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import Skeleton from 'react-loading-skeleton';
 import { NavLink } from 'react-router-dom';
 import Footer from './Footer'
-
+import Navbar from './Navbar';
 
 const Products = () => {
 
@@ -58,6 +58,7 @@ const Products = () => {
     const ShowProducts = () => {
         return (
             <>
+
                 <div className='buttons d-flex justify-content-center mb-5 pb-5'>
                     <button className='btn btn-outline-dark me-2' onClick={() => setFilter(data)}>All Products 🏷️ </button>
                     <button className='btn btn-outline-dark me-2' onClick={() => filterProduct("men's clothing")}>Mens 🧔 </button>
@@ -90,8 +91,24 @@ const Products = () => {
 
     return (
         <>
+            <Navbar />
+            <div className="card bg-dark text-white border-0">
+                <img src="https://i.pinimg.com/originals/0f/f7/78/0ff7784184af761d38db3013a4d1584e.gif" className="card-img" alt="Background" height="420px"
+                    style={{
+                        opacity: 0.2,
+                        backgroundSize: "cover",
+                    }}
+                />
+                <div className="card-img-overlay my-5">
+                    <div className='container'>
+                        <h5 className="card-title display-2 fw-bolder mb-0">BlockChain Transaction Store</h5>
+                        <p className="card-text display-6">This is a wider card with supporting web3.0 transaction system.</p>
+                        <p className="card-text display-6"><small>Web 3.0 Technology connect with Metamask</small></p>
+                    </div>
+                </div>
+            </div>
             <div>
-                <div className='container my-4 py-5'>
+                <div className='container my-3 py-5'>
                     <div className='row'>
                         <div className='col-12 mb-5'>
                             <h1 className='display-6 fw-bolder text-center'>Latest Products 😄 100% Discount </h1>

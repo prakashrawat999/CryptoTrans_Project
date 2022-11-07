@@ -1,5 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import Navbar from './Navbar';
+import Footer from './Footer'
 
 const Checkout = () => {
   const state = useSelector((state) => state.addItem)
@@ -18,6 +20,7 @@ const Checkout = () => {
   }
   return (
     <>
+    <Navbar />
     <div>
       Checkout Cart Product
       <ul className='list-group mb-3'>
@@ -28,6 +31,7 @@ const Checkout = () => {
       </li>
       </ul>
     </div>
+    <Footer />
     </>
   )
 }

@@ -6,18 +6,17 @@
 }
 .coin-line{
     padding: 5px;
-    box-shadow: 0px 15px 15px #d8d2d8;
+    box-shadow: 0px 15px 15px #7c7a7a;
+    margin-bottom: 30px;
 }
 
 .coin-head {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
-    font-size: 30px;
+    font-size: 33px;
     font-weight: 600;
-    margin-top: 8px;
+    margin-top: 25px;
 }
-
-
 
 .coin {
     display: flex;

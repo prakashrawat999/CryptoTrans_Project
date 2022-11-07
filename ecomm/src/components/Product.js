@@ -5,7 +5,7 @@ import { NavLink } from 'react-router-dom'
 import Footer from './Footer'
 import { useDispatch } from 'react-redux';
 import { addItem, delItem } from '../redux/actions/index';
-
+import Navbar from './Navbar';
 
 const Product = () => {
 
@@ -89,6 +89,7 @@ const Product = () => {
 
     return (
         <>
+        <Navbar />
             <div className='container py-5'>
                 <div className='row py-4'>
                     {loading ? <Loading /> : <ShowProduct />}
