@@ -5,8 +5,7 @@ import CartBtn from './buttons/CartBtn'
 const Navbar = () => {
     return (
         <>
-            <div>
-                <nav className="navbar navbar-expand-lg bg-light py-3">
+                <nav className="navbar navbar-expand-lg">
                     <div className="container-fluid ms-4">
                         <NavLink className="navbar-brand fs-bold fs-3" to="/">CrypTRADE</NavLink>
                         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,13 +29,11 @@ const Navbar = () => {
                             <div className='buttons'>
                                 <NavLink to='/meta' className="btn btn-outline-dark " type="submit">
                                     <i className='fa fa-user me-1'> Metamask Connect</i></NavLink>
-                                    <CartBtn />
-                                
+                                <CartBtn />
                             </div>
                         </div>
                     </div>
                 </nav>
-            </div>
         </>
     )
 }

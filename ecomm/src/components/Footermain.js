@@ -11,7 +11,9 @@ export default function Footermain() {
                                         <Link to="/feedback" className="no-underline text-white">  <p className="text-sm text-white">Feedback</p> </Link>
                                 </div>
                                 <div className="text-white flex-col flex justify-center items-center">
+                                        <Link to="/tandc" className="no-underline text-white">
                                         <p className="text-sm text-white">Terms & Conditions</p>
+                                        </Link>
                                         <p className="text-sm text-white">Privacy Policy</p>
                                         <p className="text-sm text-white">Transaction</p>
                                 </div>

@@ -13,6 +13,7 @@ import Coin from './components/Coin';
 import Crypto from "./components/Crypto";
 import Transaction from './components/Transaction';
 import Feedback from './components/Feedback';
+import TandC from './components/TandC';
 
 const App = () => {
   return (
@@ -22,6 +23,7 @@ const App = () => {
           <Route exact path="/about" element={<About />} />
           <Route exact path="/feedback" element={<Feedback />} />
           <Route exact path="/products" element={<Products />} />
+          <Route exact path="/tandc" element={<TandC />} />
           <Route exact path="/products/:id" element={<Product />} />
           <Route exact path="/cart" element={<Cart />} />
           <Route exact path="/checkout" element={<Checkout />} />
