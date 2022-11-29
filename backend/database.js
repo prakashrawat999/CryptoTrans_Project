@@ -5,7 +5,6 @@ const getDb = () => {
     const client = new MongoClient(uri)
     const db = client.db('CryptoTrade')
     console.log('database connected')
-    console.log("connecteds");
     return db
 }
 const getCollection = async (collname) => {
@@ -15,6 +14,14 @@ const getCollection = async (collname) => {
 }
 const addcontactus = async (object) => {
     const collname = await getCollection('ContactUs')
+    return await collname.insertOne(object)
+}
+const addsignup = async (object) => {
+    const collname = await getCollection('Usersignup')
+    return await collname.insertOne(object)
+}
+const addfeedback = async (object) => {
+    const collname = await getCollection('feedbacks')
     return await collname.insertOne(object)
 }
 
@@ -48,6 +55,6 @@ const del = async (id) => {
 }
 
 module.exports = {
-    show, add, drop, update, del, addcontactus
+    show, add, drop, update, del, addcontactus,addsignup,addfeedback
 }
 

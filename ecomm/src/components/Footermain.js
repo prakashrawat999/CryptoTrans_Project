@@ -14,7 +14,9 @@ export default function Footermain() {
                                         <Link to="/tandc" className="no-underline text-white">
                                         <p className="text-sm text-white">Terms & Conditions</p>
                                         </Link>
+                                        <Link to="/privacypolicy" className="no-underline text-white">
                                         <p className="text-sm text-white">Privacy Policy</p>
+                                        </Link>
                                         <p className="text-sm text-white">Transaction</p>
                                 </div>
                                 <div className="text-white flex-col flex justify-center items-center">

@@ -1,7 +1,7 @@
 const express = require('express')
 const body_parser = require('body-parser')
 const cors = require('cors')
-const { addcontactus, show, add, drop, update, del } = require('./database.js')
+const { addcontactus,addsignup, show, add, drop, update,addfeedback, del } = require('./database.js')
 const app = express()
 app.use(cors())
 app.use(body_parser.urlencoded({ extended: true }))
@@ -10,6 +10,18 @@ app.post('/contact', async (req, res) => {
     const data = req.body
     const response = await addcontactus(data)
     console.log("contactus added")
+    res.send(response)
+})
+app.post('/feedback', async (req, res) => {
+    const data = req.body
+    const response = await addfeedback(data)
+    console.log("feedback added")
+    res.send(response)
+})
+app.post('/signup', async (req, res) => {
+    const data = req.body
+    const response = await addsignup(data)
+    console.log("signup added")
     res.send(response)
 })
 app.post('/add', function (req, res) {

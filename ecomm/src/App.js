@@ -14,12 +14,15 @@ import Crypto from "./components/Crypto";
 import Transaction from './components/Transaction';
 import Feedback from './components/Feedback';
 import TandC from './components/TandC';
-
+import Login1 from './components/login'
+import Signup1 from './components/signup'
+import Privacypolicy from './components/privacypolicy';
 const App = () => {
   return (
     <>
         <Routes>
           <Route exact path="/" element={<Home />} />
+          <Route exact path="/privacypolicy" element={<Privacypolicy />} />
           <Route exact path="/about" element={<About />} />
           <Route exact path="/feedback" element={<Feedback />} />
           <Route exact path="/products" element={<Products />} />
@@ -33,6 +36,8 @@ const App = () => {
           <Route exact path="/crypto" element={<Crypto />} />
           <Route exact path="/transaction" element={<Transaction />} />
           <Route exact path="*" element={<ErrorPage />} />
+          <Route exact path='/login' element={<Login1/>}/>
+          <Route exact path='/signup' element={<Signup1/>}/>
         </Routes>
     </>
   );

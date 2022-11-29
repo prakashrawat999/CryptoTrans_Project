@@ -16,8 +16,8 @@ export default function Navigationbar() {
                     <Link to='/contactus' className='no-underline text-white'><li className='list-none'>Contact</li> </Link>
                     <Link to='/products' className="no-underline text-white"> <li className='list-none'>Store</li> </Link>
                 </div>
-                <div className='flex items-center space-x-2 mr-4'><button className='homeBtn py-2 px-2 w-16 text-white'>Login</button>
-                    <button className='homeBtn py-2 px-2 text-white'>Signup</button></div>
+                <div className='flex items-center space-x-2 mr-4'><Link to='/login' className='no-underline text-white'><button className='homeBtn py-2 px-2 w-16 text-white'>Login</button></Link>
+                  <Link to='/signup' className='text-white no-underline'> <button className='homeBtn py-2 px-2 text-white'>Signup</button> </Link> </div>
             </div>
         </>
     )

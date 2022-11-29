@@ -1,0 +1,21 @@
+
+
+
+h1 {
+    font-family: 'Suez One';
+    font-size: 3em;
+    text-align: center;
+    letter-spacing: .2em;
+    font-weight: normal;
+}
+.card1 {
+    width: 750px;
+    height: 500px;
+    border-radius: 3px;
+    box-shadow: 2px 4px 5px hsla(0, 0, 0, .1),
+        -2px 4px 5px hsla(0, 0, 0, .1);
+    transition: all .2s ease;
+    
+   
+}
+
