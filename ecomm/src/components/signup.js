@@ -5,14 +5,21 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 import axios from 'axios';
 import Navigationbar from './Navigationbar';
 import Footermain from './Footermain';
-
+import {Link} from 'react-router-dom';
 export default function Signup1() {
 
     const name = useRef(null)
     const phone = useRef(null)
     const email = useRef(null)
     const password = useRef(null)
+    const date= new Date()
 
+    const handlereset = () => {
+      name.current.value = ''
+      password.current.value = ''
+      phone.current.value = ''
+      email.current.value=''
+    }
     const formsubmit=async(e)=>{
 
     e.preventDefault();
@@ -21,16 +28,11 @@ export default function Signup1() {
         email:email.current.value,
         password:password.current.value,
         phone:phone.current.value,
-        name:name.current.value
-    }
-    const handlereset = () => {
-      name.current.value = ''
-      password.current.value = ''
-      phone.current.value = ''
-      email.current.value=''
+        name:name.current.value,
+        stamp: date.toLocaleString()
     }
 
-    const response=axios.post('http://localhost:4001/signup',log)
+    const response=await axios.post('http://localhost:4001/signup',log)
     if (response.data.acknowledged === true) {
         window.alert("Registration succesful!")
         handlereset()
@@ -81,6 +83,7 @@ export default function Signup1() {
                 SignUp
             </Button>
             </div>
+           
 
             </Form>
     </div>

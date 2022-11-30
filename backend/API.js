@@ -1,7 +1,8 @@
 const express = require('express')
+const nodemailer=require('nodemailer')
 const body_parser = require('body-parser')
 const cors = require('cors')
-const { addcontactus,addsignup, show, add, drop, update,addfeedback, del } = require('./database.js')
+const { addcontactus,addsignup, show, add, drop, update,addfeedback, del,findEmail,Updatepass,checklogin } = require('./database.js')
 const app = express()
 app.use(cors())
 app.use(body_parser.urlencoded({ extended: true }))
@@ -11,6 +12,12 @@ app.post('/contact', async (req, res) => {
     const response = await addcontactus(data)
     console.log("contactus added")
     res.send(response)
+})
+app.post('/login', async(req,res)=>{
+  const data= req.body
+  const response= await checklogin(data)
+  console.log(response)
+  res.send(response)
 })
 app.post('/feedback', async (req, res) => {
     const data = req.body
@@ -69,4 +76,54 @@ app.post('/del', async (req, res) => {
 app.get('*', (req, res) => {
     res.status(404).send("URL not found")
 })
+var transporter= nodemailer.createTransport({
+    service:"gmail",
+    auth:{
+      user:"crypTrade1011@gmail.com",
+      pass:"eywm ijom zgse rani"
+    },
+    tls:{
+      rejectUnauthorized:false
+    }
+  })
+
+  app.post('/forget',async(req,res)=>{
+    const data=req.body
+    const email= data.email
+    const response=await findEmail(data)
+    if(response===1){
+    var mail={
+      from:'crypTrade1011@gmail.com',
+      to:email,
+      subject:'Password reset',
+      html:`<h1> Password reset mail:</h1> <br/> <p> Click on the link below to reset your password </p> <br/>
+       <a href='http://localhost:3000/reset'> Link </a>`
+    }
+    transporter.sendMail(mail,function(error,info){
+      if(error){
+        console.log(error)
+        res.send({done:"no"})
+      }
+      else{
+        console.log("done")
+        res.send({done:"yes"})
+      }
+    })
+  }
+  else{
+    res.send({done:"no"})
+  }
+  })
+  app.put('/reset/:i',async(req,res)=>{
+    const data=req.body
+    const data2=req.params.i
+    const response= await Updatepass(data,data2)
+    if(response===1){
+    console.log("password updated")
+    res.send({done:"yes"}) }
+    else{
+      console.log("error in updation")
+      res.send({done:"no"})
+    }
+  })
 app.listen(4001)

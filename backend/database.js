@@ -18,14 +18,47 @@ const addcontactus = async (object) => {
 }
 const addsignup = async (object) => {
     const collname = await getCollection('Usersignup')
-    return await collname.insertOne(object)
+    const check= await collname.findOne({email:object.email})
+    if(check===null){
+        return await collname.insertOne(object)
+    }
+    else{
+        return({acknowledged:false})
+    }
+}
+const checklogin= async(object)=>{
+    const collname= await getCollection("Usersignup")
+    const see= await collname.findOne({email:object.email,password:object.password});
+    return(see)
+}
+const Updatepass=async(obj,mail)=>{
+    const email=mail
+    const password=obj.password
+    const collname= await getCollection('Usersignup')
+    const ans= await collname.updateOne({email:email},{$set:{password:password}})
+    if(ans.acknowledged===true){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
+const findEmail=async(object)=>{
+    const collname=await getCollection('Usersignup')
+    const data= await collname.findOne({email:object.email})
+    if(data!=null){
+        return 1;
+    }
+    else{
+        return 0;
+    }
 }
 const addfeedback = async (object) => {
     const collname = await getCollection('feedbacks')
     return await collname.insertOne(object)
 }
 
-
+//CrMughav@1017 pass of crypTrade1011@gmail.com pass: eywm ijom zgse rani
 const show = async () => {
     const collName = await getCollection('transaction')
     const col = await collName.find()
@@ -55,6 +88,6 @@ const del = async (id) => {
 }
 
 module.exports = {
-    show, add, drop, update, del, addcontactus,addsignup,addfeedback
+    show, add, drop, update, del, addcontactus,addsignup,addfeedback, findEmail, Updatepass,checklogin
 }
 

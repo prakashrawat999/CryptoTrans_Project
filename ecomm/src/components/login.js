@@ -4,13 +4,18 @@ import React, { useRef } from 'react'
 import Navigationbar from './Navigationbar';
 import Footermain from './Footermain'
 import axios from 'axios';
+import {Link, useNavigate} from 'react-router-dom'
+import Cookies from 'js-cookie';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 export default function Login1() {
-
+    const navigation=useNavigate()
     const email = useRef(null)
     const password = useRef(null)
-
+    const handlereset=()=>{
+        email.current.value=''
+        password.current.value=''
+    }
     const formsubmit=async(e)=>{
 
     e.preventDefault();
@@ -20,12 +25,21 @@ export default function Login1() {
         password:password.current.value
     }
 
-    const resp=axios.post('http://localhost:4001/login',log)
-    resp.then(res=>{
-        console.log("Login successful!")
-    }).catch(err=>{
-        console.log(err)
-    })
+    const response=await axios.post('http://localhost:4001/login',log)
+    if(response.data==''){
+        window.alert("Login failed")
+        handlereset()
+        navigation('/')
+    }
+    else{
+        Cookies.set("Islogin",true)
+        Cookies.set("Name",response.data.name)
+        Cookies.set("Email",response.data.email)
+        Cookies.set("Phone",response.data.phone)
+        window.alert("Login successful!")
+        handlereset()
+        navigation('/')
+    }
 }
   return (
     <>
@@ -51,7 +65,7 @@ export default function Login1() {
                 Login
             </Button>
             </div>
-
+            <Link to='/forget' className='text-white'><p className='text-center'>Forgot password?</p></Link>
             </Form>
     </div>
     </div>

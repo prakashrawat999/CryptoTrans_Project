@@ -16,6 +16,9 @@ import Feedback from './components/Feedback';
 import TandC from './components/TandC';
 import Login1 from './components/login'
 import Signup1 from './components/signup'
+import Reset from './components/reset'
+import Forget from './components/forget'
+import Profile from './components/profile';
 import Privacypolicy from './components/privacypolicy';
 const App = () => {
   return (
@@ -38,6 +41,9 @@ const App = () => {
           <Route exact path="*" element={<ErrorPage />} />
           <Route exact path='/login' element={<Login1/>}/>
           <Route exact path='/signup' element={<Signup1/>}/>
+          <Route exact path='/reset' element={<Reset/>}/>
+          <Route exact path='/forget' element={<Forget/>}/>
+          <Route exact path='/profile' element={<Profile/>}/>
         </Routes>
     </>
   );
