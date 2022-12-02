@@ -2,7 +2,7 @@ const express = require('express')
 const nodemailer=require('nodemailer')
 const body_parser = require('body-parser')
 const cors = require('cors')
-const { addcontactus,addsignup, show, add, drop, update,addfeedback, del,findEmail,Updatepass,checklogin } = require('./database.js')
+const { addcontactus,addsignup, show, add, drop, update,addfeedback, del,findEmail,findEmailreset,Updatepass,checklogin } = require('./database.js')
 const app = express()
 app.use(cors())
 app.use(body_parser.urlencoded({ extended: true }))
@@ -117,12 +117,19 @@ var transporter= nodemailer.createTransport({
   app.put('/reset/:i',async(req,res)=>{
     const data=req.body
     const data2=req.params.i
+    const responsefirst=await findEmailreset(data2);
+    if(responsefirst===1){
     const response= await Updatepass(data,data2)
     if(response===1){
     console.log("password updated")
     res.send({done:"yes"}) }
     else{
       console.log("error in updation")
+      res.send({done:"no"})
+    }
+   }
+   else{
+      console.log("email not found")
       res.send({done:"no"})
     }
   })

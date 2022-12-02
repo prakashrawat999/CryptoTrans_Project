@@ -1,4 +1,3 @@
-import Cookies from 'js-cookie'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import React, { useRef } from 'react'
@@ -17,7 +16,6 @@ export default function Forget() {
     }
     const response= await axios.post('http://localhost:4001/forget',data)
     if(response.data.done==='yes'){
-      Cookies.set('forgetmail',email.current.value)
       window.alert("Password reset mail sent successfully!")
     }
     else{

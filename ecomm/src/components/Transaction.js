@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { Loader } from './Loader';
+import { useNavigate } from 'react-router-dom';
 import { TransContext } from '../contextAPI/TransContext';
 import Cookies from 'js-cookie';
 
@@ -17,6 +18,7 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
 export default function Transaction() {
 
     const { transForm, send, handleFormData } = useContext(TransContext);
+    const navigation=useNavigate()
     //const { value } = useContext(TransContext);
     //console.log(value);
 

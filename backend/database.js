@@ -53,6 +53,16 @@ const findEmail=async(object)=>{
         return 0;
     }
 }
+const findEmailreset=async(object)=>{
+    const collname=await getCollection('Usersignup')
+    const data= await collname.findOne({email:object})
+    if(data!=null){
+        return 1;
+    }
+    else{
+        return 0;
+    }
+}
 const addfeedback = async (object) => {
     const collname = await getCollection('feedbacks')
     return await collname.insertOne(object)
@@ -88,6 +98,6 @@ const del = async (id) => {
 }
 
 module.exports = {
-    show, add, drop, update, del, addcontactus,addsignup,addfeedback, findEmail, Updatepass,checklogin
+    show, add, drop, update, del, addcontactus,addsignup,addfeedback, findEmail,findEmailreset, Updatepass,checklogin
 }
 
