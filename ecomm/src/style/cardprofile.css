@@ -1,0 +1,63 @@
+
+.procard {
+    width: 500px;
+    height: 400px;
+    background: #07182E;
+    background: rgb(10,10,10);
+background: linear-gradient(90deg, rgba(10,10,10,1) 0%, rgba(8,13,180,1) 36%, rgba(111,3,3,1) 100%);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    place-items: center;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  
+  .procard h2 {
+    z-index: 1;
+    color: rgb(193, 237, 250);
+    font-size: 3.5em;
+    text-shadow: rgba(255,255,255,0.8) 0px 0px 4px;
+  }
+  .procard p {
+    z-index: 1;
+    color:  rgb(245, 210, 247);
+    font-size: 1.5em;
+  }
+  
+  .procard::before {
+    content: '';
+    position: absolute;
+    width: 300px;
+    background-image: linear-gradient(180deg, rgb(0, 183, 255), rgb(255, 48, 255));
+    height: 130%;
+    animation: rotBGimg 3s linear infinite;
+    transition: all 0.2s linear;
+  }
+  
+  @keyframes rotBGimg {
+    from {
+      transform: rotate(0deg);
+    }
+  
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .procard::after {
+    content: '';
+    position: absolute;
+    background: #000307;
+    
+    ;
+    inset: 9px;
+    border-radius: 15px;
+  }  
+  /* .card:hover:before {
+    background-image: linear-gradient(180deg, rgb(81, 255, 0), purple);
+    animation: rotBGimg 3.5s linear infinite;
+  } */
+  /*CREDITS TO: uiverse.io */
+  
