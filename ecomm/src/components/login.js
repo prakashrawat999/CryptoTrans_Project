@@ -1,27 +1,43 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import Navigationbar from './Navigationbar';
 import Footermain from './Footermain'
 import axios from 'axios';
 import {Link, useNavigate} from 'react-router-dom'
 import Cookies from 'js-cookie';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import validator from 'validator'
+import { BsEyeFill } from "react-icons/bs";
 
 export default function Login1() {
+    //IMPORTANT: ENTER EMAIL CHAR BY CHAR FOR VALIDATOR TO WORK ELSE IT WILL NOT VALIDATE 
+    //SO DONT DIRECTLY COPY PASTE EMAIL....
     const navigation=useNavigate()
-    const email = useRef(null)
+    const [email,setEmail]=useState("")
+    var [HasemailError,setHasEmailError]=useState(false);
     const password = useRef(null)
+    const[passwordShown,setPasswordShown]=useState(false);
+ const Passwordvisibility = () => {
+  setPasswordShown(!passwordShown);
+};
     const handlereset=()=>{
-        email.current.value=''
+        setEmail("")
         password.current.value=''
     }
+    const CheckEmail = (e) => {
+        setEmail(e.target.value)
+        if (validator.isEmail(email)) {
+          setHasEmailError(false)
+        } else {
+          setHasEmailError(true)
+        }
+      }
     const formsubmit=async(e)=>{
-
     e.preventDefault();
-
+    if(HasemailError===false){
     const log={
-        email:email.current.value,
+        email:email,
         password:password.current.value
     }
 
@@ -29,7 +45,7 @@ export default function Login1() {
     if(response.data==''){
         window.alert("Login failed")
         handlereset()
-        navigation('/')
+        navigation('/login')
     }
     else{
         Cookies.set("Islogin",true)
@@ -41,24 +57,31 @@ export default function Login1() {
         navigation('/')
     }
 }
+else{
+    window.alert("Enter correct details")
+}
+}
   return (
     <>
     <Navigationbar/>
     <div className='flex justify-center items-center'> 
-    <div className='rounded-lg bg-black w-auto text-white mt-32 mb-32 px-24 py-8'>
+    <div className='rounded-lg bg-black w-auto text-white mt-32 mb-32 px-28 py-8'>
             <h1 className='text-center mb-10'>Login</h1>
-            <Form onSubmit={formsubmit}>
-            <Form.Group className="mb-3 " controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
-                <Form.Control type="email" placeholder="Enter email" ref={email} required/>
-                <Form.Text className="text-muted">
-                We'll never share your email with anyone else.
-                </Form.Text>
+            <Form validated={true} onSubmit={formsubmit}>
+            <Form.Group className="mb-3" controlId="formBasicEmail">
+              <Form.Label>Email address</Form.Label>
+              <Form.Control className='prevent-validation' type="email" placeholder="Enter email" onChange={(e)=>CheckEmail(e)} value={email} required />
+              <Form.Text className="text-muted">
+              {(HasemailError === true) ? <p className='text-red-700'>Enter a valid email</p> : <p className="">Valid Email</p>}
+              </Form.Text>
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" ref={password} required/>
+                <div className='flex items-center space-x-4'>
+              <Form.Control type={passwordShown ? "text" : "password"}  ref={password} placeholder="Password" required />
+              <BsEyeFill onClick={()=>Passwordvisibility()} className='text-2xl cursor-pointer'/>
+              </div>
             </Form.Group>
             <div className='flex justify-center my-10'>
             <Button className="px-4 py-1" variant="primary" type="submit">
