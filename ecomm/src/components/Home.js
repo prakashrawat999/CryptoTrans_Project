@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { TransContext } from '../contextAPI/TransContext';
+
 import Navigationbar from './Navigationbar'
 import crypto from '../assets/crypto.png'
 import icon1 from '../assets/icon1.png'
@@ -12,6 +14,9 @@ import ReactPlayer from 'react-player'
 import { Link } from 'react-router-dom'
 
 export default function Home() {
+
+  const { checkMetaAccountConnected, MetaAccount } = useContext(TransContext);
+
   return (
     <>
       <div className='homeBg h-screen'>
@@ -21,7 +26,15 @@ export default function Home() {
             <h1 className='txtglow'>Welcome to CrypTRADE!
               <p> -The Cryptocurrency transaction system </p></h1>
             <p className='font-bold text-2xl'>Check out! <p className=' font-thin text-lg'>Now use Crypto at online stores, payment gateways,etc.</p></p>
-            <button class="homeBtn px-4">Start Now!</button>
+            {!MetaAccount && (
+              <button
+                class="homeBtn px-4"
+                type='button'
+                onClick={checkMetaAccountConnected}
+              >
+                Connect MetaMask Account 😄
+              </button>
+            ) || (<h3> Your Meta Account Connected 🟢 </h3> )}
           </div>
           <img src={crypto} className='homeImg' alt='img'></img>
         </div>

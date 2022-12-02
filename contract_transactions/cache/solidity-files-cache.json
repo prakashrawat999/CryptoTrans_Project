@@ -1,0 +1,40 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "C:\\Users\\hp\\Desktop\\Project\\contract_transactions\\contracts\\MyTransContract.sol": {
+      "lastModificationDate": 1669791035975,
+      "contentHash": "e52915b7dc7eaf24c213f185c6f08020",
+      "sourceName": "contracts/MyTransContract.sol",
+      "solcConfig": {
+        "version": "0.8.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.0"
+      ],
+      "artifacts": [
+        "MyTransContract"
+      ]
+    }
+  }
+}

@@ -1,46 +1,77 @@
-import React from 'react'
-import Button from 'react-bootstrap/Button';
-import Form from 'react-bootstrap/Form';
+import React, { useContext } from 'react'
+import { Loader } from './Loader';
+import { TransContext } from '../contextAPI/TransContext';
+
+
+const Input = ({ placeholder, name, type, value, handleChange }) => (
+    <input
+        placeholder={placeholder}
+        type={type}
+        step="0.0001"
+        value={value}
+        onChange={(e) => handleChange(e, name)}
+        className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+    />
+);
 
 export default function Transaction() {
-  return (
-    <div>
-        <div className='my-10   text-white text-xl rounded-xl '>
-            <Form className="py-6 px-20 space-y-8 rounded-lg" >
-            <Form.Group className=" w-80" controlId="formBasicMsg">
-                <div>
-                <Form.Label>Name</Form.Label>
-                <Form.Control type="text" placeholder="Name" />
-                </div>
-            </Form.Group>
-            <Form.Group className="" controlId="formBasicTransactionId">
-                <div>
-                <Form.Label>Transaction ID</Form.Label>
-                <Form.Control type="text" placeholder="Transaction Id" />
-                </div>
-            </Form.Group>
 
-            <Form.Group className="" controlId="formBasicEtherium">
-                <div>
-                <Form.Label>Etherium Box</Form.Label>
-                <Form.Control type="text" placeholder="Etherium Box" />
-                </div>
-            </Form.Group>
+    const { transForm, send, handleFormData } = useContext(TransContext);
+    //const { value } = useContext(TransContext);
+    //console.log(value);
 
-            <Form.Group className="" controlId="formBasicMsg">
-                <div>
-                <Form.Label>Message Box</Form.Label>
-                <Form.Control type="text" placeholder="Message Box" />
-                </div>
-            </Form.Group>
+    //console.log(checkMetaAccountConnected);
 
-            <div className='flex justify-center'>
-            <Button variant="primary" type="submit" className='bg-white text-black rounded mt-2 px-3 py-1 w-32' controlId="formBasicSubmit"> 
-                Send
-            </Button>
+    /*
+    const checkMetaAccountConnected = () => {
+      console.log('working');
+    }
+    */
+
+    const handleSubmit = (e) => {
+        const { addressTo, amount, keyword, message } = transForm;
+
+        e.preventDefault();
+
+        if (!addressTo || !amount || !keyword || !message) return;
+        send();
+        console.log("Submit");
+    }
+
+    return (
+        <>
+            <div className="py-6 px-20 space-y-8 rounded-lg">
+                <div className='my-10 text-white text-xl rounded-xl'>
+                    <br></br>
+                    <Input
+                        placeholder="Address" name="addressTo" type="text" handleChange={handleFormData} />
+                    <br></br>
+                    <br></br>
+                    <Input placeholder="Amount(ETH)" name="amount" type="number" handleChange={handleFormData} />
+                    <br></br>
+                    <br></br>
+                    <Input placeholder="Keyword" name="keyword" type="text" handleChange={handleFormData} />
+                    <br></br>
+                    <br></br>
+                    <Input placeholder="Enter Message" name="message" type="text" handleChange={handleFormData} />
+                    <br></br>
+                    <br></br>
+
+                    {
+                        false ? (
+                            <Loader />
+                        ) : (
+                            <button
+                                className='w-80 border-none h-10'
+                                type='button'
+                                onClick={handleSubmit}
+                            >
+                                Send Payment
+                            </button>
+                        )
+                    }
+                </div>
             </div>
-            </Form>
-        </div>
-    </div>
-  );
+        </>
+    );
 }

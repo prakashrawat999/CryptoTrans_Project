@@ -20,9 +20,17 @@ import Reset from './components/reset'
 import Forget from './components/forget'
 import Profile from './components/profile';
 import Privacypolicy from './components/privacypolicy';
+import store from './redux/store';
+import { Provider } from 'react-redux';
+
+import { TransactionProvider } from './contextAPI/TransContext';
+
+
 const App = () => {
   return (
     <>
+      <TransactionProvider>
+      <Provider store={store}>
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/privacypolicy" element={<Privacypolicy />} />
@@ -37,17 +45,18 @@ const App = () => {
           <Route exact path="/contactus" element={<Contactus />} />
           <Route exact path="/coin" element={<Coin />} />
           <Route exact path="/crypto" element={<Crypto />} />
-          <Route exact path="/transaction" element={<Transaction />} />
           <Route exact path="*" element={<ErrorPage />} />
-          <Route exact path='/login' element={<Login1/>}/>
-          <Route exact path='/signup' element={<Signup1/>}/>
-          <Route exact path='/reset' element={<Reset/>}/>
-          <Route exact path='/forget' element={<Forget/>}/>
-          <Route exact path='/profile' element={<Profile/>}/>
+          <Route exact path='/login' element={<Login1 />} />
+          <Route exact path='/signup' element={<Signup1 />} />
+          <Route exact path='/reset' element={<Reset />} />
+          <Route exact path='/forget' element={<Forget />} />
+          <Route exact path='/profile' element={<Profile />} />
+          <Route exact path='/transacton' element={<Transaction />} />
         </Routes>
+      </Provider>
+      </TransactionProvider>
     </>
   );
 }
 
 export default App;
-

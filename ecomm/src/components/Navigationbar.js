@@ -24,6 +24,7 @@ export default function Navigationbar() {
                     <Link to='/' className='no-underline text-white'>  <li className='list-none'>Home</li> </Link>
                     <Link to='/about' className='no-underline text-white'>  <li className='list-none'>About</li> </Link>
                     <Link to='/contactus' className='no-underline text-white'><li className='list-none'>Contact</li> </Link>
+                    <Link to='/welcome' className='no-underline text-white'><li className='list-none'>Transactions</li> </Link>
                     <Link to='/products' className="no-underline text-white"> <li className='list-none'>Store</li> </Link>
                 </div>
                 {Cookies.get().Islogin === "false" ? <div className='flex items-center space-x-2 mr-4'><Link to='/login' className='no-underline text-white'><button className='homeBtn py-2 px-2 w-16 text-white'>Login</button></Link>
