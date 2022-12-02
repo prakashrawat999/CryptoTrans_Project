@@ -4,40 +4,54 @@ import Navigationbar from './Navigationbar';
 import ReactStars from 'react-stars'
 import axios from 'axios';
 import Footermain from './Footermain';
-
+import Cookies from 'js-cookie'
+import { useNavigate } from 'react-router-dom';
 export default function Feedback() {
+  const navigation= useNavigate()
   const [rating, setRating] = useState(0)
+  var [feedback,setFeedback]=useState("")
+  var [mesgError, setMesgError] =useState(false)
   var date = new Date()
   const name = useRef()
-  const email = useRef()
-  const feedback = useRef()
   const ratingChanged = (newRating) => {
     setRating(newRating)
   }
   const handlereset = () => {
     name.current.value = ''
-    email.current.value = ''
-    feedback.current.value = ''
+    setFeedback("")
     setRating(0);
   }
   const submit = async (e) => {
     e.preventDefault()
+    if(Cookies.get().Islogin==="true"){
     let detail = {
       name: name.current.value,
-      email: email.current.value,
+      email: Cookies.get().Email,
       rating: rating,
-      feedback: feedback.current.value,
+      feedback: feedback,
       stamp: date.toLocaleString()
     }
+    if(rating!==0 && mesgError===false){
     const response = await axios.post('http://localhost:4001/feedback', detail)
     if (response.data.acknowledged === true) {
       window.alert("Submitted!")
       handlereset()
+      navigation('/')
     }
     else {
       window.alert("Error in submitting form")
       handlereset()
+      navigation('/feedback')
     }
+  }
+  else{
+    window.alert("Enter some rating or check entered details")
+ }
+}
+  else{
+    window.alert("Login to continue")
+    navigation('/login')
+  }
   }
   return (
     <>
@@ -53,17 +67,16 @@ export default function Feedback() {
           placeholder="Enter Name"
           style={styles.inputarea}
           ref={name}
-        />
-        <input
-          placeholder="Enter Email"
-          style={styles.inputarea}
-          ref={email}
+          required
         />
         <textarea
           placeholder="Write feedback"
           style={styles.textarea1}
-          ref={feedback}
+          value={feedback}
+          onChange={(e)=>{setFeedback(e.target.value); if(e.target.value.length<20) {setMesgError(true)} else{ setMesgError(false)}}}
+          required
         />
+        {(mesgError===true)? <p className='text-red-700'>Enter feeback of more than 20 words</p>: " "}
         <button style={styles.button}>Submit</button>
       </form>
       <Footermain />
