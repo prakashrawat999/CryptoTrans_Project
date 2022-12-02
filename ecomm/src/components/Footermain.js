@@ -7,7 +7,7 @@ export default function Footermain() {
                         <div className="flex items-center justify-between footer2">
                                 <div className="text-white flex-col flex justify-center items-center">
                                         <Link to='/about' className="no-underline text-white">  <p className="text-sm text-white">About Us</p>  </Link>
-                                        <Link to='/contact' className="no-underline text-white"><p className="text-sm text-white">Contact us</p> </Link>
+                                        <Link to='/contactus' className="no-underline text-white"><p className="text-sm text-white">Contact us</p> </Link>
                                         <Link to="/feedback" className="no-underline text-white">  <p className="text-sm text-white">Feedback</p> </Link>
                                 </div>
                                 <div className="text-white flex-col flex justify-center items-center">
