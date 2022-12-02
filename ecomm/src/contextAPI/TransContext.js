@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
+﻿import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
-
+import Cookies from 'js-cookie'
 import { contractABI, contractAddress } from "../utils/info";
 
 export const TransContext = React.createContext();
@@ -83,6 +83,9 @@ export const TransactionProvider = ({ children }) => {
                 return alert("Install & Connect MetaMask 👍");
             }
             const { addressTo, amount, keyword, message } = transForm;
+            Cookies.set("To",addressTo)
+            Cookies.set("Amount",amount)
+            Cookies.set("From",MetaAccount)
             const transContract = fetchContract();
             const parsedAmount = ethers.utils.parseEther(amount);
 
@@ -107,6 +110,8 @@ export const TransactionProvider = ({ children }) => {
             console.log(`🔴 Loading - ${transHash.hash}`);
             await transHash.wait();
             console.log(`🟢 Success - ${transHash.hash}`);
+            Cookies.set("Status",true)
+            Cookies.set("Transhash",transHash.hash)
             setLoading(false);
 
             // -----------------------------------------------loading area------------------------------------------------------------
@@ -118,6 +123,7 @@ export const TransactionProvider = ({ children }) => {
         } catch (error) {
             console.log(error);
             console.log("Failed 😢");
+            Cookies.set("Status",false)
         }
     };
 

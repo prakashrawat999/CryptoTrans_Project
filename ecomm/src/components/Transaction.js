@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import { Loader } from './Loader';
 import { TransContext } from '../contextAPI/TransContext';
-
+import Cookies from 'js-cookie';
 
 const Input = ({ placeholder, name, type, value, handleChange }) => (
     <input
@@ -28,14 +28,25 @@ export default function Transaction() {
     }
     */
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
+        Cookies.set("Status",false)
+        Cookies.remove("Transhash")
+        Cookies.remove("To")
+        Cookies.remove("From")
+        Cookies.remove("Amount")
         const { addressTo, amount, keyword, message } = transForm;
 
         e.preventDefault();
 
-        if (!addressTo || !amount || !keyword || !message) return;
-        send();
+        if (!addressTo || !amount || !keyword || !message) { window.alert("fill complete details in transaction form to proceed!"); return;}
+        await send();
         console.log("Submit");
+       if(Cookies.get().Status==="true"){
+            navigation('/success')
+        }
+        else{
+            navigation('/failure')
+        }
     }
 
     return (

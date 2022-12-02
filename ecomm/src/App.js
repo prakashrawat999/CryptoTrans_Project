@@ -1,6 +1,8 @@
 import './App.css';
 import Home from './components/Home';
 import payment from './components/payment';
+import Successful from './components/successful'
+import Failure from './components/failure';
 import Products from './components/Products';
 import Product from './components/Product';
 import { Routes, Route } from 'react-router-dom';
@@ -35,6 +37,8 @@ const App = () => {
       <Provider store={store}>
         <Routes>
           <Route exact path="/" element={<Home />} />
+          <Route exact path="/success" element={<Successful/>}/>
+          <Route exact path="/failure" element={<Failure/>}/>
           <Route exact path="/privacypolicy" element={<Privacypolicy />} />
           <Route exact path="/about" element={<About />} />
           <Route exact path="/feedback" element={<Feedback />} />
