@@ -124,16 +124,13 @@ Contact us
                         </div>
                         <ul class="social">
                             <li>
-                                <a href="#"  target="_blank"class="fa fa-facebook"></a>
+                                <a href="https://www.facebook.com/raghav.juneja.102"  target="_blank"class="fa fa-facebook"></a>
                             </li>
                             <li>
-                                <a href="#" class="fa fa-twitter"></a>
+                                <a href="https://mobile.twitter.com/MuskanJ90697268" class="fa fa-twitter"></a>
                             </li>
                             <li>
-                                <a href="#" class="fa fa-google-plus"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fa fa-linkedin"></a>
+                                <a href="https://www.linkedin.com/in/muskan-juneja-944996213/" class="fa fa-linkedin"></a>
                             </li>
                         </ul>
                     </div>
@@ -150,16 +147,13 @@ Contact us
                         </div>
                         <ul class="social">
                             <li>
-                                <a href="#" class="fa fa-facebook"></a>
+                                <a href="https://www.facebook.com/people/Vineet-Ajmani/100078124230833/" class="fa fa-facebook"></a>
                             </li>
                             <li>
-                                <a href="#" class="fa fa-twitter"></a>
+                                <a href="https://twitter.com/ajmani_vineet" class="fa fa-twitter"></a>
                             </li>
                             <li>
-                                <a href="#" class="fa fa-google-plus"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fa fa-linkedin"></a>
+                                <a href="https://www.linkedin.com/in/vineetajmani01/" class="fa fa-linkedin"></a>
                             </li>
                         </ul>
                     </div>
@@ -175,16 +169,13 @@ Contact us
                         </div>
                         <ul class="social">
                             <li>
-                                <a href="#" class="fa fa-facebook"></a>
+                                <a href="https://www.facebook.com/profile.php?id=100063728432033" class="fa fa-facebook"></a>
                             </li>
                             <li>
-                                <a href="#" class="fa fa-twitter"></a>
+                                <a href="https://twitter.com/PrakashrawatPk1" class="fa fa-twitter"></a>
                             </li>
                             <li>
-                                <a href="#" class="fa fa-google-plus"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fa fa-linkedin"></a>
+                                <a href="https://www.linkedin.com/in/prakash-rawat-257913212/" class="fa fa-linkedin"></a>
                             </li>
                         </ul>
                     </div>
@@ -202,16 +193,13 @@ Contact us
                         </div>
                         <ul class="social">
                             <li>
-                                <a href="#" class="fa fa-facebook"></a>
+                                <a href="https://www.facebook.com/profile.php?id=100086016172106" class="fa fa-facebook"></a>
                             </li>
                             <li>
-                                <a href="#" class="fa fa-twitter"></a>
+                                <a href="https://twitter.com/RonakSh19956388" class="fa fa-twitter"></a>
                             </li>
                             <li>
-                                <a href="#" class="fa fa-google-plus"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fa fa-linkedin"></a>
+                                <a href="https://www.linkedin.com/in/ronak-sharma-1a661719b/" class="fa fa-linkedin"></a>
                             </li>
                         </ul>
                     </div>
