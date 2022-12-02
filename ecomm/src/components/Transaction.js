@@ -44,16 +44,16 @@ export default function Transaction() {
                 <div className='my-10 text-white text-xl rounded-xl'>
                     <br></br>
                     <Input
-                        placeholder="Address" name="addressTo" type="text" handleChange={handleFormData} />
+                        placeholder="Address" name="addressTo" type="text" handleChange={handleFormData} required />
                     <br></br>
                     <br></br>
-                    <Input placeholder="Amount(ETH)" name="amount" type="number" handleChange={handleFormData} />
+                    <Input placeholder="Amount(ETH)" name="amount" type="number" handleChange={handleFormData} required />
                     <br></br>
                     <br></br>
-                    <Input placeholder="Keyword" name="keyword" type="text" handleChange={handleFormData} />
+                    <Input placeholder="Keyword" name="keyword" type="text" handleChange={handleFormData} required />
                     <br></br>
                     <br></br>
-                    <Input placeholder="Enter Message" name="message" type="text" handleChange={handleFormData} />
+                    <Input placeholder="Enter Message" name="message" type="text" handleChange={handleFormData} required />
                     <br></br>
                     <br></br>
 

@@ -7,6 +7,8 @@ import ronak from '../assets/ronak.jpeg'
 import muskan from '../assets/muskan.jpeg'
 import vineet from '../assets/vineet.jpeg'
 import prakash from '../assets/prakash.jpeg'
+import { Link } from "react-router-dom";
+
 
 
 const About = () => {
@@ -45,9 +47,11 @@ through the blockchain network). </p>
 
 </section>
 <center>
+<Link to='/contactus'>
 <button class = "homeBtn px-4">
-  Contact US
+Contact us
 </button>
+</Link>
 </center>
 <br></br>
 <br></br>

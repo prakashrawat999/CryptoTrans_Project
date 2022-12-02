@@ -1,5 +1,6 @@
 import './App.css';
 import Home from './components/Home';
+import payment from './components/payment';
 import Products from './components/Products';
 import Product from './components/Product';
 import { Routes, Route } from 'react-router-dom';
@@ -19,6 +20,7 @@ import Signup1 from './components/signup'
 import Reset from './components/reset'
 import Forget from './components/forget'
 import Profile from './components/profile';
+import Recent from './components/recent';
 import Privacypolicy from './components/privacypolicy';
 import store from './redux/store';
 import { Provider } from 'react-redux';
@@ -37,6 +39,7 @@ const App = () => {
           <Route exact path="/about" element={<About />} />
           <Route exact path="/feedback" element={<Feedback />} />
           <Route exact path="/products" element={<Products />} />
+          <Route exact path="/payment" element={<payment />} />
           <Route exact path="/tandc" element={<TandC />} />
           <Route exact path="/products/:id" element={<Product />} />
           <Route exact path="/cart" element={<Cart />} />
@@ -52,6 +55,7 @@ const App = () => {
           <Route exact path='/forget' element={<Forget />} />
           <Route exact path='/profile' element={<Profile />} />
           <Route exact path='/transacton' element={<Transaction />} />
+          <Route exact path="/recent" element={<Recent />} />
         </Routes>
       </Provider>
       </TransactionProvider>

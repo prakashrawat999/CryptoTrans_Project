@@ -12,16 +12,18 @@ export default function Footermain() {
                                 </div>
                                 <div className="text-white flex-col flex justify-center items-center">
                                         <Link to="/tandc" className="no-underline text-white">
-                                        <p className="text-sm text-white">Terms & Conditions</p>
+                                                <p className="text-sm text-white">Terms & Conditions</p>
                                         </Link>
                                         <Link to="/privacypolicy" className="no-underline text-white">
-                                        <p className="text-sm text-white">Privacy Policy</p>
+                                                <p className="text-sm text-white">Privacy Policy</p>
                                         </Link>
-                                        <p className="text-sm text-white">Transaction</p>
+                                        <Link to="/recent" className="no-underline text-white">
+                                                <p className="text-sm text-white">Recent Transactions</p>
+                                        </Link>
                                 </div>
                                 <div className="text-white flex-col flex justify-center items-center">
                                         <Link to='/products' className="no-underline text-white"><p className="text-sm text-white">Store</p> </Link>
-                                        <p className="text-sm text-white">Payment gateway</p>
+                                        <p className="text-sm text-white">Crypto News</p>
                                         <Link to='/crypto' className="no-underline text-white"> <p className="text-sm text-white">Prices</p> </Link>
                                 </div>
                                 <div className="text-white flex-col flex justify-center items-center">
