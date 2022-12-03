@@ -52,7 +52,13 @@ export default function News() {
   return (
     <>
     <Navigationbar />
+    <br></br>
+          <br></br>
+          <h1>Daily News</h1>
+          <br></br>
+          <br></br>
          <div class="main_news my-28">
+          
         <ul class="card_newss">
           {response && response.map(news=>{
             return (
