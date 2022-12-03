@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import axios from "axios";
 import '../style/cryptonews.css'
+import Footermain from './Footermain'
+import Navigationbar from './Navigationbar'
+
+
 export default function News() {
+
     const [page,setPage]=useState(2)
     const [response,setResponse]=useState(null)
   useEffect(()=>
@@ -46,7 +51,8 @@ export default function News() {
 
   return (
     <>
-         <div class="main_news">
+    <Navigationbar />
+         <div class="main_news my-28">
         <ul class="card_newss">
           {response && response.map(news=>{
             return (
@@ -68,6 +74,7 @@ export default function News() {
         <button className='cursor-pointer rounded' onClick={()=> getNews()}> Next page ➡️ </button>
       )}
       </div>
+      <Footermain />
     </>
 
   )
