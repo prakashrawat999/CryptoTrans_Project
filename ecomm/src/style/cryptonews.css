@@ -1,0 +1,83 @@
+.main_news{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .cryptonewsimg {
+    height: 200px;
+    width: 350px;
+    vertical-align: middle;
+  }
+  
+  .btn_news {
+    color: #ffffff;
+    padding: 0.8rem;
+    font-size: 14px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    font-weight: 400;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+  }
+  
+  .btn_news:hover {
+    background-color: rgba(255, 255, 255, 0.12);
+  }
+  
+  .card_newss {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .card_newss_item {
+    display: flex;
+    padding: 1rem;
+  }
+  
+  @media (min-width: 40rem) {
+    .card_newss_item {
+      width: 50%;
+    }
+  }
+  
+  @media (min-width: 56rem) {
+    .card_newss_item {
+      width: 33.3333%;
+    }
+  }
+  
+  .card_news {
+    background: linear-gradient(to bottom left, #97081b, #002BFF);
+    border-radius: 0.25rem;
+    box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 350px;
+    height:430px;
+    border-radius: 20px 20px;
+  }
+  
+  .card_news_content {
+    padding: 1rem;
+  }
+  
+  .card_news_text {
+    color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.25rem;    
+    font-weight: 500;
+  }
+  .made_by{
+    font-weight: 400;
+    font-size: 13px;
+    margin-top: 35px;
+    text-align: center;
+  }

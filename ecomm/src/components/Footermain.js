@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { Link } from "react-router-dom";
 import '../style/home.css'
 export default function Footermain() {
@@ -23,7 +23,7 @@ export default function Footermain() {
                                 </div>
                                 <div className="text-white flex-col flex justify-center items-center">
                                         <Link to='/products' className="no-underline text-white"><p className="text-sm text-white">Store</p> </Link>
-                                        <p className="text-sm text-white">Crypto News</p>
+                                        <Link to='/news' className="no-underline text-white"><p className="text-sm text-white">Crypto News</p> </Link>
                                         <Link to='/crypto' className="no-underline text-white"> <p className="text-sm text-white">Prices</p> </Link>
                                 </div>
                                 <div className="text-white flex-col flex justify-center items-center">

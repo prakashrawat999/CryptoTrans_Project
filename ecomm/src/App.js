@@ -24,6 +24,7 @@ import Forget from './components/forget'
 import Profile from './components/profile';
 import Recent from './components/recent';
 import Privacypolicy from './components/privacypolicy';
+import News from './components/news';
 import store from './redux/store';
 import { Provider } from 'react-redux';
 
@@ -36,6 +37,7 @@ const App = () => {
       <TransactionProvider>
       <Provider store={store}>
         <Routes>
+          <Route exact path="/news" element={<News/>}/>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/success" element={<Successful/>}/>
           <Route exact path="/failure" element={<Failure/>}/>
