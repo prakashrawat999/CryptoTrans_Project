@@ -9,6 +9,7 @@ const Input = ({ placeholder, name, type, value, handleChange }) => (
         placeholder={placeholder}
         type={type}
         step="0.0001"
+        min="0"
         value={value}
         onChange={(e) => handleChange(e, name)}
         className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
