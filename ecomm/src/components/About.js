@@ -69,7 +69,7 @@ Contact us
                      <h3>MISSION</h3>
                      <br></br>
 <br></br>
-                     <p> Lorem ipsum dolor sit amet, consealias tenetur doloribus vitae quo eaque, quae illo!fugit tempora ipsum maiores dolorum enim, beatae qui quasialias tenetur doloribus vitae quo eaque, quae illo!fugit tempora ipsum maiores dolorum enim, beatae qui quasictetur adipisicing elit. Ducimus optio  </p>
+                     <p> Our mission is to make people aware of CryptoCurrencies in which they can invest and even they can make that as a payment option in future. People can pay there amount using cryptocurrency on different platforms like ecommerce websites, food delivery apps, etc. </p>
                      </div>
                  </div>
                  <div class="col-md-4">
@@ -78,7 +78,7 @@ Contact us
                      <h3>VISSION</h3>
                      <br></br>
 <br></br>
-                     <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus optio sectetur minima soluta nulla, alias tenetur doloribus vitae quo eaque, quae illo!fugit tempora ipsum maiores dolorum enim, beatae qui quasialias tenetur doloribus vitae quo eaque, quae illo!fugit tempora ipsum maiores  </p>
+                     <p> Our mission is to make people aware of CryptoCurrencies in which they can invest and even they can make that as a payment option in future. People can pay there amount using cryptocurrency on different platforms like ecommerce websites, food delivery apps, etc.  </p>
                      </div>
                  </div>
                  <div class="col-md-4">
@@ -87,7 +87,7 @@ Contact us
                      <h3>ACHIEVEMENTS</h3>
                      <br></br>
 <br></br>
-                     <p> sint Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus optio sectetur minima soluta doloribus vitae quo eaque, quae illo!fugit tempora ipsum maiores dolorum enim, be doloribus vitae quo eaque, quae illo!fugit tempora ipsum maiores dolorum enim, beatae qui quasi </p>
+                     <p> If we talk about our achievements, we are new to this market and trying to make people aware of blockchain system using which they can easily transfer cryptocurrencies, which will act as a payment gateway for them. As we are new in this, we don't have much achievements </p>
                      </div>
                   </div>
               </div>
