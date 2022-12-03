@@ -7,8 +7,8 @@ const Footer = () => {
         <div class="container p-4 pb-0">
           <div class="mb-4">
             <a class="btn btn-outline-light btn-floating m-1" role="button"
-            href="https://www.instagram.com/crypt_transaction/"
-            ><i class="fa fa-facebook-f"></i></a>
+            href="https://www.linkedin.com/in/crypto-transaction-b03290259/"
+            ><i class="fa fa-linkedin"></i></a>
 
             <a class="btn btn-outline-light btn-floating m-1" role="button"
             href="https://twitter.com/CrptoTransacti1"

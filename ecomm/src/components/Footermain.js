@@ -33,7 +33,7 @@ export default function Footermain() {
                                         </a>
                                         <a className=" text-white my-2 transition-colors duration-300 hover:text-deep-purple-accent-400"
                                         href="https://www.linkedin.com/in/crypto-transaction-b03290259/">
-                                                <svg viewBox="0 0 24 24" fill="currentColor" className="h-5"><path d="M22,0H2C0.895,0,0,0.895,0,2v20c0,1.105,0.895,2,2,2h11v-9h-3v-4h3V8.413c0-3.1,1.893-4.788,4.659-4.788 c1.325,0,2.463,0.099,2.795,0.143v3.24l-1.918,0.001c-1.504,0-1.795,0.715-1.795,1.763V11h4.44l-1,4h-3.44v9H22c1.105,0,2-0.895,2-2 V2C24,0.895,23.105,0,22,0z" /></svg>
+                                                <svg viewBox="0 0 520 520" class="icon linkedin"><path d="M186.4 142.4c0 19-15.3 34.5-34.2 34.5 -18.9 0-34.2-15.4-34.2-34.5 0-19 15.3-34.5 34.2-34.5C171.1 107.9 186.4 123.4 186.4 142.4zM181.4 201.3h-57.8V388.1h57.8V201.3zM273.8 201.3h-55.4V388.1h55.4c0 0 0-69.3 0-98 0-26.3 12.1-41.9 35.2-41.9 21.3 0 31.5 15 31.5 41.9 0 26.9 0 98 0 98h57.5c0 0 0-68.2 0-118.3 0-50-28.3-74.2-68-74.2 -39.6 0-56.3 30.9-56.3 30.9v-25.2H273.8z" /></svg>
                                         </a>
                                         <a className=" text-white my-2 transition-colors duration-300 hover:text-deep-purple-accent-400"
                                         href="https://www.instagram.com/crypt_transaction/">
