@@ -105,7 +105,7 @@ export default function Signup1() {
 
             <Form.Group className="mb-3" controlId="formBasicPhone">
               <Form.Label>Phone Number</Form.Label>
-              <Form.Control type="number" placeholder="Enter Your Phone Number" className='prevent-validation' onChange={(e) => { setPhone(e.target.value); if (e.target.value.length !== 10) { setHasError(true) } else { setHasError(false) } }} value={Phone} required />
+              <Form.Control type="number" min="0" placeholder="Enter Your Phone Number" className='prevent-validation' onChange={(e) => { setPhone(e.target.value); if (e.target.value.length !== 10) { setHasError(true) } else { setHasError(false) } }} value={Phone} required />
               <Form.Text className="text-muted">
                 {(HasError === true) ? <p className='text-red-700'>Enter valid mobile number</p> : <p className="">Valid mobile number</p>}
               </Form.Text>
