@@ -35,6 +35,7 @@ function Crypto() {
     <>
       <Navigationbar />
       <h1 className='coin-head'>
+
         <Typewriter
           onInit={(typewriter) => {
             typewriter
@@ -54,7 +55,12 @@ function Crypto() {
         />
 
       </h1>
+      
       <p className='coin-line' />
+      <br></br>
+        <br></br>
+        <br></br>
+        <br></br>
       <div className='coin-app'>
         <Scrollbars style={{ width: 1100, height: 320 }}>
           {filteredCoins.map(coin => {

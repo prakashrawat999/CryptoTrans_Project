@@ -1,4 +1,46 @@
+.procard-tandc{
+  width: 900px;
+  height: 1300px;
+  background: white;
+  background: white;
+background: linear-gradient(90deg, rgb(158, 141, 228) 0%, rgba(255, 255, 255, 0.815) 36%, rgb(114, 199, 235) 100%);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 100px;
+}
+.procard-pp {
+  width: 900px;
+  height: 700px;
+  background: white;
+  background: white;
+background: linear-gradient(90deg, rgb(158, 141, 228) 0%, rgba(255, 255, 255, 0.815) 36%, rgb(114, 199, 235) 100%);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 100px;
+}
 
+.procard-feedback {
+  width: 400px;
+  height: 550px;
+  background: white;
+  background: white;
+background: linear-gradient(90deg, rgb(158, 141, 228) 0%, rgba(255, 255, 255, 0.815) 36%, rgb(114, 199, 235) 100%);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  place-items: center;
+  overflow: hidden;
+  border-radius: 20px;
+}
 .procard {
     width: 500px;
     height: 400px;
@@ -26,6 +68,8 @@ background: linear-gradient(90deg, rgba(10,10,10,1) 0%, rgba(8,13,180,1) 36%, rg
     font-size: 1.5em;
   }
   
+
+
   .procard::before {
     content: '';
     position: absolute;
@@ -46,6 +90,8 @@ background: linear-gradient(90deg, rgba(10,10,10,1) 0%, rgba(8,13,180,1) 36%, rg
     }
   }
   
+ 
+
   .procard::after {
     content: '';
     position: absolute;

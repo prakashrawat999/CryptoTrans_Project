@@ -24,7 +24,7 @@ export default function Home() {
         <div className='flex mt-10'>
           <div className='text-white py-5 pl-20 pr-2 flex flex-col justify-center items-center'>
             <h1 className='txtglow'>Welcome to CrypTRADE!
-              <p> -The Cryptocurrency transaction system </p></h1>
+              <p> The Cryptocurrency transaction system </p></h1>
             <p className='font-bold text-2xl'>Check out! <p className=' font-thin text-lg'>Now use Crypto at online stores, payment gateways,etc.</p></p>
             {!MetaAccount && (
               <button
@@ -38,6 +38,8 @@ export default function Home() {
           </div>
           <img src={crypto} className='homeImg' alt='img'></img>
         </div>
+        <br></br>
+        <br></br>
         <h1 className='font-bold text-4xl text-blue-900 text-center mt-32 mb-10'>Learn and Discover more about CrypTRADE and Cryptocurrency:</h1>
         <div className='flex justify-around mb-20'>
           <div className="flex flex-col space-y-4  my-12 ">

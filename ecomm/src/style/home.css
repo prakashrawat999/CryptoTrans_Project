@@ -8,8 +8,10 @@ background: linear-gradient(90deg, rgba(10,10,10,1) 0%, rgba(8,13,180,1) 36%, rg
 /*background-size: cover;*/
 }
 .homeImg{
-  height: 80vh;
-  width: 109vh;
+  height: 70vh;
+  width: 80vh;
+  padding-top: 159px;
+  padding-right: 50px;
 }
 .homeTxt{
   color: rgb(18, 2, 24);
@@ -107,3 +109,6 @@ background: linear-gradient(90deg, rgba(10,10,10,1) 0%, rgba(8,13,180,1) 36%, rg
   font-weight: bold;
  }
 
+ .home-feedback{
+  background-color: aqua;
+ }

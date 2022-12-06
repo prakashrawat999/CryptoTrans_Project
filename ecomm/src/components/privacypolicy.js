@@ -9,6 +9,10 @@ const privacypolicy = () => {
             <Navigationbar />
             <br>
             </br><br></br>
+            
+            <center>
+            <section class='procard-pp'>
+            
             <center>
             <div class="card1">
             <center>
@@ -16,7 +20,7 @@ const privacypolicy = () => {
             <h5>LAST REVISED ON [26th November, 2022]</h5>
             </center>
             <br>
-            </br><br></br>
+            </br>
             
             
             <center>
@@ -39,6 +43,8 @@ const privacypolicy = () => {
                 </h6>
             </center>
             </div>
+            </center>
+            </section>
             </center>
             <Footermain />
         </>

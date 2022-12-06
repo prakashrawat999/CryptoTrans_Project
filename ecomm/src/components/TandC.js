@@ -1,13 +1,14 @@
 import React from 'react'
 import Navigationbar from './Navigationbar'
 import Footermain from './Footermain'
+import "../style/cardprofile.css";
 
 const TandC = () => {
     return (
         <>
             <Navigationbar />
             <main id="main" class="site-main main my-5">
-                <section class="section">
+                <section class="section procard-tandc">
                     <div class="container">
                         <div class="row">
                             <div id="primary" class="content-area col-md-8 mx-auto">

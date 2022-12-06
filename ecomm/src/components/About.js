@@ -15,38 +15,48 @@ const About = () => {
   return (
     <>
       <Navigationbar />
-    
-    <center><h1 className='display-3 my-3'>About Us</h1>
-      <h5>
-            CrypTrade
-          </h5>
-          </center>   
-
+      
     <section class="about">
+    <div class="about-text">   
+    <center><h1 className='display-4'>About Us</h1>
+      <h5>
+      <b>  CrypTrade</b>    
+          </h5>
+          </center> 
+          </div>
       <div class = "main">
-      <div class="about-text">
-        
+     
+<div class="about-image">
 <img src = {crypt_tradewebsite}>
 
 </img>
-</div>  
+</div>
+
 
         
-          
-          <p>We know that Bitcoin brought blockchain technology to the forefront, which was
+ <div class="para-about">
+     <b> <p>We know that Bitcoin brought blockchain technology to the forefront, which was
 taken by the Ethereum to the next level in real world transactions, proving its security
 and transparency. So, Using Web3.0 technology, this website is a Blockchain
 transaction system having multiple other features with a stunning design. It's
 connected to the Ethereum blockchain and paired with metamask (for
 connecting crypto currency wallet with the Ethereum blockchain to send crypto
-through the blockchain network). </p>
-
+through the blockchain network). </p> 
+</b> 
 </div>
+</div>  
+
 <br></br>
 <br></br>
 
 </section>
+<section class='about-contact'>
 <center>
+<br></br>
+<br></br>
+<br></br>
+<p className='text-blue-900 text-3xl font-bold font-mono '>If you have any query, click on the button below!!! </p>
+<br></br>
 <Link to='/contactus'>
 <button class = "homeBtn px-4">
 Contact us
@@ -57,8 +67,12 @@ Contact us
 <br></br>
 <br></br>
 <br></br>
+</section>
 
 <section class="about2">
+<br></br>
+<br></br>
+<br></br>
 <div id="about-2">
      <div class="content-box-lg">
          <div class="container">
@@ -69,7 +83,7 @@ Contact us
                      <h3>MISSION</h3>
                      <br></br>
 <br></br>
-                     <p> Our mission is to make people aware of CryptoCurrencies in which they can invest and even they can make that as a payment option in future. People can pay there amount using cryptocurrency on different platforms like ecommerce websites, food delivery apps, etc. </p>
+<b>        <p> Our mission is to make people aware of CryptoCurrencies in which they can invest and even they can make that as a payment option in future. People can pay there amount using cryptocurrency on different platforms like ecommerce websites, food delivery apps, etc. </p></b>  
                      </div>
                  </div>
                  <div class="col-md-4">
@@ -78,7 +92,7 @@ Contact us
                      <h3>VISSION</h3>
                      <br></br>
 <br></br>
-                     <p> Our mission is to make people aware of CryptoCurrencies in which they can invest and even they can make that as a payment option in future. People can pay there amount using cryptocurrency on different platforms like ecommerce websites, food delivery apps, etc.  </p>
+<b>         <p> Our mission is to make people aware of CryptoCurrencies in which they can invest and even they can make that as a payment option in future. People can pay there amount using cryptocurrency on different platforms like ecommerce websites, food delivery apps, etc.  </p></b>  
                      </div>
                  </div>
                  <div class="col-md-4">
@@ -87,26 +101,30 @@ Contact us
                      <h3>ACHIEVEMENTS</h3>
                      <br></br>
 <br></br>
-                     <p> If we talk about our achievements, we are new to this market and trying to make people aware of blockchain system using which they can easily transfer cryptocurrencies, which will act as a payment gateway for them. As we are new in this, we don't have much achievements </p>
+             <b>      <p> If we talk about our achievements, we are new to this market and trying to make people aware of blockchain system using which they can easily transfer cryptocurrencies, which will act as a payment gateway for them. As we are new in this, we don't have much achievements </p></b>  
                      </div>
                   </div>
               </div>
             </div>
          </div>
       </div>   
+
+      <br></br>
+<br></br>
+<br></br>
 </section>
 
-<br></br>
-<br></br><br></br>
-<br></br><br></br>
-<br></br>
 
 <section class="Team">
+<br></br>
+<br></br><br></br>
+<br></br><br></br>
+<br></br>
   <center>
     <h2>
     <b> Our Team</b> 
     </h2>
-    <h6>We all are students of Jagan Institute of Management Studies, <br></br> Currently in final year of Bachelors of Computer Applications.</h6>
+ <b>  <h6>We all are students of Jagan Institute of Management Studies, <br></br> Currently in final year of Bachelors of Computer Applications.</h6></b> 
   </center>
 
 </section>
@@ -208,13 +226,6 @@ Contact us
         </div>
 
     </section>
-    <br></br>
-<br></br>
-<br></br>
-<br></br>
-<section class="extra-about">
-    
-</section>
 
       
       <Footermain />

@@ -1,7 +1,21 @@
 .about{
     width: 100%;
-    padding: 78px 0px;
-
+    padding: 50px 0px;
+    background: linear-gradient(90deg, rgba(10,10,10,1) 0%, rgba(8,13,180,1) 36%, rgba(111,3,3,1) 100%);
+}
+.about2{
+    color: white;
+    background: linear-gradient(90deg, rgba(10,10,10,1) 0%, rgba(8,13,180,1) 36%, rgba(111,3,3,1) 100%);
+}
+.about-contact{
+    background-color: aliceblue;
+}
+.about-image{
+    padding-top: 50px;
+}
+.para-about{
+    color: white;
+    padding-left: 100px;
 }
 
 .about img{
@@ -10,7 +24,7 @@
 }
 
 .about-text{
-    width: 5000px;
+    color: white;
 }
 
 .main{

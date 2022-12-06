@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Navigationbar from './Navigationbar';
 import ReactStars from 'react-stars'
 import axios from 'axios';
+import "../style/cardprofile.css";
 import Footermain from './Footermain';
 import Cookies from 'js-cookie'
 import { useNavigate } from 'react-router-dom';
@@ -56,6 +57,12 @@ export default function Feedback() {
   return (
     <>
       <Navigationbar />
+      <br></br>
+      <br></br>
+      <br></br>
+      <br></br>
+      <center>
+      <section class='procard-feedback'>
       <h2 className='text-center mt-20 text-purple-900'>Feedback Form</h2>
       <form style={styles.container} onSubmit={submit} className="mt-2 mb-16">
         <ReactStars
@@ -79,6 +86,8 @@ export default function Feedback() {
         {(mesgError===true)? <p className='text-red-700'>Enter feeback of more than 20 words</p>: " "}
         <button style={styles.button}>Submit</button>
       </form>
+      </section>
+      </center>
       <Footermain />
     </>
   );
@@ -114,5 +123,6 @@ const styles = {
     width: 300,
     padding: 10
   }
+  
 }
 
